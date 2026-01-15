@@ -1,0 +1,31 @@
+G21 ; mm
+G90 ; absolute
+G28 ; home
+G1 F8000
+G0 Z1
+
+; --- Startovní pozice (dolní špička srdce - posunuta níž) ---
+G0 X74 Y45 
+G1 Z0
+
+; Pravá strana - protáhlý vzestup
+G1 X90 Y55
+G1 X110 Y80
+G1 X124 Y115
+G1 X124 Y145
+G1 X114 Y170
+G1 X94 Y180
+G1 X74 Y155 ; Horní středový zářez
+
+; Levá strana - zrcadlově dolů
+G1 X54 Y180
+G1 X34 Y170
+G1 X24 Y145
+G1 X24 Y115
+G1 X38 Y80
+G1 X58 Y55
+G1 X74 Y45 ; Návrat do špičky
+
+; --- Ukončení ---
+G0 Z1
+G0 X0 Y0
